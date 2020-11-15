@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US"
-    class="theme-color-e8676b light_skin desktop cssall cssgradients rgba opacity supports textshadow cssanimations bgrepeatround bgrepeatspace boxshadow csstransforms csstransforms3d csstransitions theme-skin-ligth">
+    class="theme-color-e8676b light_skin cssall cssgradients rgba opacity supports textshadow cssanimations bgrepeatround bgrepeatspace boxshadow csstransforms csstransforms3d csstransitions theme-skin-ligth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,18 +10,16 @@
     <title>Agus Firman - CV & Portfolio</title>
 
     <link rel='stylesheet' href='assets/css/style1.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='all' /> 
     <link rel='stylesheet' href='assets/css/css2.css' type=' text/css' media='all' />
     <link rel='stylesheet' href='assets/css/slick.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='assets/css/option-panel.css' type='text/css' media='all' />
     <link rel='stylesheet' href='assets/css/awwwards.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='assets/css/theme-color.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/option-panel.css' type='text/css' media='all' />
     <link rel='stylesheet' href='assets/css/css.css' type=' text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/theme-color.css' type='text/css' media='all' />
 
-    <script type='text/javascript' src='assets/js/jquery.js'></script>
-    <script type='text/javascript' src='assets/js/jquery-migrate.min.js'></script>
-    <script type='text/javascript' src='assets/js/site.js'></script>
     <script type='text/javascript' src='assets/js/modernizr.js'></script>
+
 </head>
 
 <body
@@ -45,11 +43,11 @@
                     </li>
                     <li id="menu-item-470"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                        <a href="http://localhost/agus.firman/#experience">Work Experience</a>
+                        <a href="http://localhost/agus.firman/#project">Project</a>
                     </li>
                     <li id="menu-item-470"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                        <a href="http://localhost/agus.firman/#project">Project</a>
+                        <a href="http://localhost/agus.firman/#experience">Work Experience</a>
                     </li>
                     <li id="menu-item-472"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
@@ -92,11 +90,11 @@
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                                <a href="http://localhost/agus.firman/#experience">Work Experience</a>
+                                                <a href="http://localhost/agus.firman/#project">Project</a>
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                                <a href="http://localhost/agus.firman/#project">Project</a>
+                                                <a href="http://localhost/agus.firman/#experience">Work Experience</a>
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
@@ -128,7 +126,7 @@
                                     <div class="col-sm-5">
                                         <div class="profile-photo">
                                             <img alt="" src="assets/uploads/21.34.45.jpeg" class="photo">
-                                            <img alt="" src="assets/uploads/21.34.45.jpeg" class="photo-hover">
+                                            <img alt="" src="assets/uploads/21.34.46.jpeg" class="photo-hover">
                                         </div>
                                     </div>
                                     <div class="col-sm-7">
@@ -142,11 +140,11 @@
                                                 <span>I&#039;m <b>{{ profile.name}}</b> </span>
                                             </h1>
                                             <h2 class="profile-position">
-                                                
+
                                             </h2>
                                         </div>
                                         <ul class="profile-list">
-                                            
+
                                             <li class="clearfix">
                                                 <strong class="title">Age</strong>
                                                 <span class="cont">{{ profile.birthdate | getAge }}</span>
@@ -163,7 +161,7 @@
                                                 <strong class="title">Address</strong>
                                                 <span class="cont">
                                                     {{ profile.address }}
-                                                   </span>
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
@@ -211,9 +209,9 @@
                                 </a>
                             </p>
                             <br>
-                                <span v-html="profile.qoute">
-                                    {{ profile.qoute }}
-                                </span>
+                            <span v-html="profile.qoute">
+                                {{ profile.qoute }}
+                            </span>
                             </p>
                         </div>
                     </div>
@@ -230,9 +228,9 @@
                                     <div class="progress-bar">
                                         <div class="bar-data">
                                             <span class="bar-title">
-                                                {{ item.title }} 
+                                                {{ item.title }}
                                                 <span class="alignright">
-                                                [ {{ item.percentase }}]</span>
+                                                    [ {{ item.percentase }}]</span>
                                             </span>
                                         </div>
                                         <div class="bar-line">
@@ -252,15 +250,9 @@
                     <div class="animate-up">
                         <h2 class="section-title">Our Project</h2>
                         <div class="section-box">
-
                             <div class="row">
-                                <project
-                                v-for="item in projectItems"
-                                :name="item.name"
-                                :image="item.image"
-                                :description="item.description"
-                                :link="item.link"
-                                ></project>
+                                <project v-for="item in projectItems" :name="item.name" :image="item.image"
+                                    :description="item.description" :link="item.link"></project>
                             </div>
                         </div>
                     </div>
@@ -274,15 +266,9 @@
                         <div class="timeline">
                             <div class="timeline-bar"></div>
                             <div class="timeline-inner clearfix">
-                                <work-experience 
-                                v-for="exItem in experienceItems"
-                                v-bind:company="exItem.company"
-                                v-bind:title="exItem.title"
-                                v-bind:description="exItem.description"
-                                v-bind:start="exItem.start"
-                                v-bind:end="exItem.end"
-                                v-bind:logo="exItem.logo"
-                                >
+                                <work-experience v-for="exItem in experienceItems" v-bind:company="exItem.company"
+                                    v-bind:title="exItem.title" v-bind:description="exItem.description"
+                                    v-bind:start="exItem.start" v-bind:end="exItem.end" v-bind:logo="exItem.logo">
                                 </work-experience>
                             </div>
                         </div>
@@ -298,12 +284,8 @@
                         <div class="timeline">
                             <div class="timeline-bar"></div>
                             <div class="timeline-inner clearfix">
-                                <education 
-                                v-for="item in educactionItems"
-                                :institute="item.institute"
-                                :subject="item.subject"
-                                :start-end="item.startEnd"
-                                ></education>
+                                <education v-for="item in educactionItems" :institute="item.institute"
+                                    :subject="item.subject" :start-end="item.startEnd"></education>
                             </div>
                         </div>
                     </div>
@@ -318,41 +300,40 @@
                             <div class="col-sm-6">
                                 <div class="section-box">
                                     <h3>Feel free to contact me</h3>
-                                    <form class='contactForm' action='#' method='post'>
-                                        <div class='input-field'>
-                                            <input class='contact-name' type='text' name='name' />
+                                    <form action="#" method="get">
+                                        <div class='input-field' v-bind:class="{'error':!form.name}">
+                                            <input class='contact-name' type='text' v-model='form.name' />
                                             <span class='line'></span>
                                             <label>Name</label>
                                         </div>
 
-                                        <div class='input-field'>
-                                            <input class='contact-email' type='email' name='email' />
-                                            <span class='line'></span>
-                                            <label>Email</label>
-                                        </div>
-
-                                        <div class='input-field'>
-                                            <input class='contact-subject' type='text' name='subject' />
+                                        <div class='input-field' v-bind:class="{'error':!form.subject}">
+                                            <input class='contact-subject' type='text' v-model='form.subject' />
                                             <span class='line'></span>
                                             <label>Subject</label>
                                         </div>
 
-                                        <div class='input-field'>
-                                            <textarea class='contact-message' rows='4' name='message'></textarea>
+                                        <div class='input-field' v-bind:class="{'error':!form.nessage}">
+                                            <textarea class='contact-message' rows='4'
+                                                v-model='form.message'></textarea>
                                             <span class='line'></span>
                                             <label>Message</label>
                                         </div>
-                                        <div class='g-recaptcha' data-theme='light' data-sitekey='' id='recaptcha1'>
-                                        </div>
                                         <div class="check-field">
-                                            <input type="checkbox" name="rsPivacyPolicy" id="rsPivacyPolicy">
+                                            <input type="checkbox" v-model="form.policy" id="policy">
                                             <label for="rsPivacyPolicy">I have read the Privacy Policy note.</label>
                                         </div><span class='btn-outer btn-primary-outer ripple'>
                                             <input class='contact-submit btn btn-lg btn-primary' type='submit'
-                                                value='Send' />
+                                                value='Send' @click="submitContact" />
                                         </span>
 
-                                        <div class='contact-response'></div>
+                                        <div class='contact-response'>
+                                            <p v-if="errors.length">
+                                                <ul class="error text-danger">
+                                                    <li v-for="error in errors">{{ error }}</li>
+                                                </ul>
+                                            </p>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -361,8 +342,9 @@
                                     <ul class="contact-list">
                                         <li class="clearfix">
                                             <strong>E-mail</strong>
-                                            <span><a
-                                                    href="mailto:firmanagus59@gmail.com">firmanagus59@gmail.com</a></span>
+                                            <span>
+                                                <a href="mailto:firmanagus59@gmail.com">firmanagus59@gmail.com</a>
+                                            </span>
                                         </li>
                                         <li class="clearfix">
                                             <strong>Phone</strong>
@@ -370,12 +352,16 @@
                                         </li>
                                         <li class="clearfix">
                                             <strong>Address</strong>
-                                            <span>Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat Daerah Khusus Ibukota Jakarta 11630</span>
+                                            <span>Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat
+                                                Daerah Khusus Ibukota Jakarta 11630</span>
                                         </li>
                                     </ul>
-                                    
-                                    <div class="embed mb-2">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4365774891307!2d106.75532621390632!3d-6.206000862518089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f73b1c513161%3A0x15d4dfd5bdd04d89!2sAgus%20Firman%2C%20Jl.%20H.%20Simun%20RT.1%20RW.5%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sid!2sid!4v1605349663743!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="false" aria-hidden="true" tabindex="0"></iframe>
+
+                                    <div class="mb-2">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4365774891307!2d106.75532621390632!3d-6.206000862518089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f73b1c513161%3A0x15d4dfd5bdd04d89!2sAgus%20Firman%2C%20Jl.%20H.%20Simun%20RT.1%20RW.5%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sid!2sid!4v1605349663743!5m2!1sid!2sid"
+                                            width="600" height="450" frameborder="0" style="border:0;"
+                                            allowfullscreen="false" aria-hidden="true" tabindex="0"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -423,34 +409,32 @@
 
 
     <script src="/assets/js/vue.js"></script>
-    <script type='text/javascript' src='assets/js/jquery.mCustomScrollbar.concat.min.js'></script>
-    <script type='text/javascript' src='assets/js/contact-form.js'></script>
-    <script type='text/javascript' src='assets/js/js.cookie.min.js'></script>
-    <script type='text/javascript' src='assets/js/woocommerce.min.js'></script>
-    <script type='text/javascript' src='assets/js/api.js'></script>
-    <script type='text/javascript' src='assets/js/map-icons.min.js'></script>
-    <script type='text/javascript' src='assets/js/imagesloaded.min.js'></script>
-    <script type='text/javascript' src='assets/js/isotope.pkgd.min.js'></script>
-    <script type='text/javascript' src='assets/js/jquery.appear.js'></script>
-    <script type='text/javascript' src='assets/js/jquery.onepagenav.min.js'></script>
-    <script type='text/javascript' src='assets/js/jquery.bxslider.min.js'></script>
-    <script type='text/javascript' src='assets/js/mediaelement-migrate.min.js'></script>
-    <script type='text/javascript' src='assets/js/owl.carousel.js'></script>
-    <script type='text/javascript' src='assets/js/slick.min.js'></script>
-    <script type='text/javascript' src='assets/js/awwwards.js'></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     
+
+    <script type='text/javascript' src='assets/js/jquery.js'></script>
+    <script type='text/javascript' src='assets/js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='assets/js/site.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.appear.js'></script>
+    <script type='text/javascript' src='assets/js/slick.min.js'></script>
+    <script type='text/javascript' src='assets/js/owl.carousel.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.onepagenav.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script type='text/javascript' src='assets/js/imagesloaded.min.js'></script>
+
     <script>
         Vue.component('button-counter', {
             data: function () {
                 return {
-                count: 0
+                    count: 0
                 }
             },
             template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
         })
 
         Vue.component('work-experience', {
-            props:['company', 'description','logo', 'title', 'start', 'end'],
+            props: ['company', 'description', 'logo', 'title', 'start', 'end'],
             template: ` <div class="timeline-box ">
                             <span class="dot"></span>
                             <div class="timeline-box-inner ">
@@ -473,7 +457,7 @@
         })
 
         Vue.component('education', {
-            props:['institute', 'startEnd','subject'],
+            props: ['institute', 'startEnd', 'subject'],
             template: `<div class="timeline-box timeline-box-compact ">
                             <span class="dot"></span>
                             <div class="timeline-box-inner ">
@@ -489,11 +473,11 @@
         })
 
         Vue.component('project', {
-            props:['name', 'image','description','link'],
-            template: `<div class="col-md-6">
+            props: ['name', 'image', 'description', 'link'],
+            template: `<div class="card col-md-4 col-sm-4 col-xs-12">
                         <div class="service">
                             <div class="service-icon"><i class="rsicon rsicon-paint-brush"></i></div>
-                            <h3 class="service-title">{{ name }}</h3>
+                            <h4 class="service-title">{{ name }}</h4>
                             <img :src="image" alt="Image">
                             <div class="service-cont">
                                 <hr>
@@ -507,137 +491,193 @@
         })
 
 
-       var app = new Vue({
+        var app = new Vue({
             el: '#app',
-            data:{
-                profile:{
-                    name:"Agus Firman",
-                    birthdate:"19910603",
-                    position:"Fullstack Web Developer",
-                    address:" Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat Daerah Khusus Ibukota Jakarta 11630",
-                    phone:"0859-450-71263",
-                    email:"firmanagus59@gmail.com",
-                    facebook:"",
-                    instagram:"",
-                    dribble:"",
-                    twitter:"",
-                    linkedin:"",
-                    linkcv:"https://www.linknya.com",
-                    qoute:"Assalamu'alaikum, Saya Agus Firman. Selaku pegiat atau pekerja di bidang teknologi khususnya perancangan WEB aplikasi.</br>Saya selalu berpikir terbuka, luas dan maju  dengan  setiap kemajuan teknologi yang begitu amat cepat dan pesat saat ini, dengan itu saya selalu mengembangkan kemampuan diri akan hal- hal baru."
+            data: {
+                form: {
+                    name: null,
+                    subject: null,
+                    message: null,
+                    policy: false
                 },
-                skillItems:[
-                        {title:"WordPress",percentase:"80%"},
-                        {title:"HTML & CSS",percentase:"80%"},
-                        {title:"PHP",percentase:"90%"},
-                        {title:"Framework Laravel",percentase:"80%"},
-                        {title:"Framework Codeigniter",percentase:"70%"},
-                    ],  
-                experienceItems:[
-                        {
-                            company:"Brawijaya Healthcare",
-                            title:"Fullstack WEB Developer",
-                            description:"Merancang atau membuat aplikasi berbasis WEB mulai dari design database sampai dengan deployment application, terlepas itu saya juga mengerjakan untuk sisi Front-end dan Back-end nya",
-                            logo:"./assets/brawijaya.png",
-                            start:"Desember 2019",
-                            end:"Present"
-                        },
-                        {
-                            company:"RS Grha Kedoya",
-                            title:"WEB Developer & System Analys",
-                            description:"Merancang atau membuat aplikasi berbasis WEB dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor",
-                            logo:"./assets/grhakedoya.png",
-                            start:"November 2018",
-                            end:"Desember 2019"
-                        },
-                        {
-                            company:"RSIA Grand Family",
-                            title:"WEB Developer & Head IT",
-                            description:"Merancang atau membuat aplikasi kebutuhan internal dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor serta koordinasi dengan divisi terkait ",
-                            logo:"./assets/grandfamily.png",
-                            start:"Oktober 2015",
-                            end:"November 2018"
-                        },
-                        {
-                            company:"SMK Insan Aqilah (Serang)",
-                            title:"Teacher of WEB Design",
-                            description:"Memberikan dan merancang KBM siswa untuk mata pelajaran yang berhubungan dengan pemrograman dan networking",
-                            logo:"./assets/insanaqilah.png",
-                            start:"Oktober 2015",
-                            end:"November 2018"
-                        },
-                    ], 
-                educactionItems:[
-                    {
-                        institute:"Indonesia Networker",
-                        startEnd:"September 2017-Oktober 2017",
-                        subject:"Networking Programming"
+                errors: [],
+                profile: {
+                    name: "Agus Firman",
+                    birthdate: "19910603",
+                    position: "Fullstack Web Developer",
+                    address: " Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat Daerah Khusus Ibukota Jakarta 11630",
+                    phone: "0859-450-71263",
+                    email: "firmanagus59@gmail.com",
+                    facebook: "",
+                    instagram: "",
+                    dribble: "",
+                    twitter: "",
+                    linkedin: "",
+                    linkcv: "https://www.linknya.com",
+                    qoute: "Assalamu'alaikum, Saya Agus Firman. Selaku pegiat atau pekerja di bidang teknologi khususnya perancangan WEB aplikasi.</br>Saya selalu berpikir terbuka, luas dan maju  dengan  setiap kemajuan teknologi yang begitu amat cepat dan pesat saat ini, dengan itu saya selalu mengembangkan kemampuan diri akan hal- hal baru."
+                },
+                skillItems: [{
+                        title: "WordPress",
+                        percentase: "80%"
                     },
                     {
-                        institute:"BANTEN JAYA UNIVERSITY",
-                        startEnd:"Mei 2010-Mei2015",
-                        subject:"Banchelor of Information Technology"
+                        title: "HTML & CSS",
+                        percentase: "80%"
                     },
                     {
-                        institute:"Teknoss",
-                        startEnd:"Januari 2010-Maret 2010",
-                        subject:"MS. Office"
+                        title: "PHP",
+                        percentase: "90%"
+                    },
+                    {
+                        title: "Framework Laravel",
+                        percentase: "80%"
+                    },
+                    {
+                        title: "Framework Codeigniter",
+                        percentase: "70%"
+                    },
+                ],
+                experienceItems: [{
+                        company: "Brawijaya Healthcare",
+                        title: "Fullstack WEB Developer",
+                        description: "Merancang atau membuat aplikasi berbasis WEB mulai dari design database sampai dengan deployment application, terlepas itu saya juga mengerjakan untuk sisi Front-end dan Back-end nya",
+                        logo: "./assets/brawijaya.png",
+                        start: "Desember 2019",
+                        end: "Present"
+                    },
+                    {
+                        company: "RS Grha Kedoya",
+                        title: "WEB Developer & System Analys",
+                        description: "Merancang atau membuat aplikasi berbasis WEB dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor",
+                        logo: "./assets/grhakedoya.png",
+                        start: "November 2018",
+                        end: "Desember 2019"
+                    },
+                    {
+                        company: "RSIA Grand Family",
+                        title: "WEB Developer & Head IT",
+                        description: "Merancang atau membuat aplikasi kebutuhan internal dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor serta koordinasi dengan divisi terkait ",
+                        logo: "./assets/grandfamily.png",
+                        start: "Oktober 2015",
+                        end: "November 2018"
+                    },
+                    {
+                        company: "SMK Insan Aqilah (Serang)",
+                        title: "Teacher of WEB Design",
+                        description: "Memberikan dan merancang KBM siswa untuk mata pelajaran yang berhubungan dengan pemrograman dan networking",
+                        logo: "./assets/insanaqilah.png",
+                        start: "Oktober 2015",
+                        end: "November 2018"
+                    },
+                ],
+                educactionItems: [{
+                        institute: "Indonesia Networker",
+                        startEnd: "September 2017-Oktober 2017",
+                        subject: "Networking Programming"
+                    },
+                    {
+                        institute: "BANTEN JAYA UNIVERSITY",
+                        startEnd: "Mei 2010-Mei2015",
+                        subject: "Banchelor of Information Technology"
+                    },
+                    {
+                        institute: "Teknoss",
+                        startEnd: "Januari 2010-Maret 2010",
+                        subject: "MS. Office"
                     }
                 ],
-                projectItems:[
-                    {
-                        name:"WEB Portal with Attendance",
-                        image:"./assets/images/mockups/portal-web.png",
-                        link:"https://portal.brawijayainvestama.com",
-                        description:"WEB portal aplikasi yang digunakan untuk karyawan internal mulai dari Head Office sampai dengan unit untuk melakukan absensi secara online dengan fitur current geolocation dari Google Maps dan manfaat Whatsapp Blast untuk notifikasinya "
+                projectItems: [{
+                        name: "WEB Portal with Attendance",
+                        image: "./assets/images/mockups/portal-web.png",
+                        link: "https://portal.brawijayainvestama.com",
+                        description: "WEB portal aplikasi yang digunakan untuk karyawan internal mulai dari Head Office sampai dengan unit untuk melakukan absensi secara online dengan fitur current geolocation dari Google Maps dan manfaat Whatsapp Blast untuk notifikasinya "
                     },
                     {
-                        name:"Hospital Acquisition Stock",
-                        image:"./assets/images/mockups/hospital-acquisitions.jpg",
-                        link:"http://139.255.96.149:5011/",
-                        description:"WEB aplikasi yang digunakan untuk melakukan transaksi serah terima stock (Stock Opname) terakhir yang dimana aplikasi ini sudah support untuk multi company dan dengan fitur stock freeze (stock tidak akan terecord ketika ada pergerakan"
+                        name: "Hospital Acquisition Stock",
+                        image: "./assets/images/mockups/hospital-acquisitions.jpg",
+                        link: "http://139.255.96.149:5011/",
+                        description: "WEB aplikasi yang digunakan untuk melakukan transaksi serah terima stock (Stock Opname) terakhir yang dimana aplikasi ini sudah support untuk multi company dan dengan fitur stock freeze (stock tidak akan terecord ketika ada pergerakan"
                     },
                     {
-                        name:"Helpdesk Ticketing IT",
-                        image:"./assets/images/mockups/helpdesk.jpg",
-                        link:"http://portal.brawijayainvestama.com",
-                        description:"WEB aplikasi yang digunakan untuk melakukan request perbaikan dari user kepada tim support IT, user bisa melakukan monitorin progress case yang sudah di terima oleh tim IT. Applikasi ini juga sudah support multi company yang dimana ketika proses request ticket bisa langsung mengarahkan ke unit company terkait"
+                        name: "Helpdesk Ticketing IT",
+                        image: "./assets/images/mockups/helpdesk.jpg",
+                        link: "http://portal.brawijayainvestama.com",
+                        description: "WEB aplikasi yang digunakan untuk melakukan request perbaikan dari user kepada tim support IT, user bisa melakukan monitorin progress case yang sudah di terima oleh tim IT. Applikasi ini juga sudah support multi company yang dimana ketika proses request ticket bisa langsung mengarahkan ke unit company terkait"
                     },
                     {
-                        name:"HR Contract Monitoring",
-                        image:"./assets/images/mockups/Internal-Brawijaya.png",
-                        link:"http://139.255.96.149:5002/InternalBrawijaya",
-                        description:"WEB aplikasi yang digunakan khusus untuk divisi HR terkait kontrak karyawan yang dimana aplikasi ini juga sudah mendukung multi company dan sudah ada reminder kontrak H-30, H-10 menjelang habis kontrak"
+                        name: "HR Contract Monitoring",
+                        image: "./assets/images/mockups/Internal-Brawijaya.png",
+                        link: "http://139.255.96.149:5002/InternalBrawijaya",
+                        description: "WEB aplikasi yang digunakan khusus untuk divisi HR terkait kontrak karyawan yang dimana aplikasi ini juga sudah mendukung multi company dan sudah ada reminder kontrak H-30, H-10 menjelang habis kontrak"
                     },
                     {
-                        name:"E-Form Legal",
-                        image:"./assets/images/mockups/legal.jpg",
-                        link:"http://portal.brawijayainvestama.com",
-                        description:"WEB aplikasi yang digunakan khusus untuk divisi Legal terkait proses legalitas perusahaan yang dimana dalam aplikasi ini dibagi beberapa type legalitasnya mulai dari dokter, prusahaan , dan opini user"
+                        name: "E-Form Legal",
+                        image: "./assets/images/mockups/legal.jpg",
+                        link: "http://portal.brawijayainvestama.com",
+                        description: "WEB aplikasi yang digunakan khusus untuk divisi Legal terkait proses legalitas perusahaan yang dimana dalam aplikasi ini dibagi beberapa type legalitasnya mulai dari dokter, prusahaan , dan opini user"
                     },
-                ] 
+                ]
             },
             created() {
-                console.log(this.profile);
-                this.getAge();
+                // console.log(this.profile);
+                // this.getAge();
             },
-            filters:{
-                getAge(dob){                    
+            filters: {
+                getAge(dob) {
                     var year = Number(dob.substr(0, 4));
                     var month = Number(dob.substr(4, 2)) - 1;
                     var day = Number(dob.substr(6, 2));
                     var today = new Date();
                     var age = today.getFullYear() - year;
                     if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
-                    age--;
+                        age--;
                     }
-                    return age+"th";
+                    return age + "th";
                 }
             },
             methods: {
+                mailTo(param) {
+                    console.log('OK');
+                },
+                resetForm() {
+                    this.form = {
+                        name: '',
+                        subject: '',
+                        message: '',
+                        policy: false
+                    };
+                },
+                submitContact(e) {
+                    e.preventDefault();
+                    const $form = this.form;
+                    this.errors = [];
+
+                    if ($form.name && $form.subject && $form.message) {
+                        if ($form.policy) {
+                            let subject = $form.subject;
+                            let body = encodeURIComponent(
+                                `Dear:Agus Firman \nFrom:${$form.name}\n${$form.message}`);
+                            window.location.href =
+                                `mailto:firmanagus59@gmail.com?subject=${subject}&body=${body}`;
+                            this.resetForm();
+                        } else {
+                            this.errors.push('Please checkeed for to policy  accept.');
+                        }
+                    }
+
+                    if (!$form.name) {
+                        this.errorName = true;
+                    }
+
+                    if (!$form.subject) {
+                        this.errorSubject = true;
+                    }
+                    if (!$form.message) {
+                        this.errorMessage = true;
+                    }
+                }
             },
         })
-
-        
     </script>
 </body>
 
