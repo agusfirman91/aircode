@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US"
-    class="theme-color-e8676b light_skin desktop cssall cssgradients rgba opacity supports textshadow cssanimations bgrepeatround bgrepeatspace boxshadow csstransforms csstransforms3d csstransitions theme-skin-dark">
+    class="theme-color-e8676b light_skin desktop cssall cssgradients rgba opacity supports textshadow cssanimations bgrepeatround bgrepeatspace boxshadow csstransforms csstransforms3d csstransitions theme-skin-ligth">
 
 <head>
     <meta charset="UTF-8">
@@ -25,12 +25,13 @@
 </head>
 
 <body
-    class="home page-template page-template-page-home page-template-page-home-php page page-id-310 woocommerce-no-js header-has-img  masthead-fixed loading"
-    ng-app="">
+    class="home page-template page-template-page-home page-template-page-home-php page page-id-310 woocommerce-no-js header-has-img  masthead-fixed loading">
 
     <div class="mobile-nav">
 
-        <button class="btn-mobile mobile-nav-close"><i class="rsicon rsicon-close"></i></button>
+        <button class="btn-mobile mobile-nav-close">
+            <i class="rsicon rsicon-close"></i>
+        </button>
         <div id="mobile-nav" class="mobile-nav-inner">
             <nav class="nav">
                 <ul class="clearfix">
@@ -44,11 +45,11 @@
                     </li>
                     <li id="menu-item-470"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                        <a href="http://localhost/agus.firman/#portfolio">Portfolio</a>
+                        <a href="http://localhost/agus.firman/#experience">Work Experience</a>
                     </li>
                     <li id="menu-item-470"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                        <a href="http://localhost/agus.firman/#experience">Experience</a>
+                        <a href="http://localhost/agus.firman/#project">Project</a>
                     </li>
                     <li id="menu-item-472"
                         class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
@@ -63,7 +64,7 @@
         </div>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" id="app">
         <header class="header">
             <div class="head-bg" style="background-image: url('assets/uploads/rs-cover-2-2-1-1.jpg')">
             </div>
@@ -91,11 +92,11 @@
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                                <a href="http://localhost/agus.firman/#portfolio">Portfolio</a>
+                                                <a href="http://localhost/agus.firman/#experience">Work Experience</a>
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                                <a href="http://localhost/agus.firman/#experience">experience</a>
+                                                <a href="http://localhost/agus.firman/#project">Project</a>
                                             </li>
                                             <li id="menu-item-470"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
@@ -117,6 +118,8 @@
 
         <div class="content">
             <div class="container">
+
+                <!-- Profile Section -->
                 <section id="about" class="section section-about">
                     <div class="animate-up">
                         <div class="section-box">
@@ -132,42 +135,35 @@
                                         <div class="profile-info">
                                             <div class="profile-items clearfix">
                                                 <div class="profile-preword">
-                                                    <span>Hello</span>
+                                                    <span>Assalamu'alaikum</span>
                                                 </div>
                                             </div>
                                             <h1 class="profile-title">
-                                                <span>I&#039;m <b>Agus Firman</b> </span>
+                                                <span>I&#039;m <b>{{ profile.name}}</b> </span>
                                             </h1>
-                                            <h2 class="profile-position">Software Engineering & System Analys
-                                                <br>at RS Grha Kedoya </h2>
-                                            .
+                                            <h2 class="profile-position">
+                                                
+                                            </h2>
                                         </div>
                                         <ul class="profile-list">
+                                            
                                             <li class="clearfix">
                                                 <strong class="title">Age</strong>
-                                                <span class="cont">27 th</span>
+                                                <span class="cont">{{ profile.birthdate | getAge }}</span>
                                             </li>
                                             <li class="clearfix">
-                                                <strong class="title">Address</strong>
-                                                <span class="cont">Jl. Ciruas - Walantaka Pipitan KM.3<br />Serang -
-                                                    Banten 42183</span>
+                                                <strong class="title">E-mail</strong>
+                                                <span class="cont">{{ profile.email }}</span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <strong class="title">Phone</strong>
+                                                <span class="cont">{{ profile.phone }}</span>
                                             </li>
                                             <li class="clearfix">
                                                 <strong class="title">Address</strong>
                                                 <span class="cont">
-                                                    Jl. H. Simun
-                                                    RW.5, Srengseng
-                                                    Kec. Kembangan
-                                                    Kota Jakarta Barat
-                                                    Daerah Khusus Ibukota Jakarta 11630</span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <strong class="title">E-mail</strong>
-                                                <span class="cont">firmanagus59@gmail.com</span>
-                                            </li>
-                                            <li class="clearfix">
-                                                <strong class="title">Phone</strong>
-                                                <span class="cont">+62 859 450 71263</span>
+                                                    {{ profile.address }}
+                                                   </span>
                                             </li>
                                         </ul>
                                     </div>
@@ -210,93 +206,37 @@
                         </div>
                         <div class="section-txt-btn">
                             <p>
-                                <a class="btn btn-lg btn-border ripple" target="_blank" href="https://bit.ly/2NJOhGa">
+                                <a class="btn btn-lg btn-border ripple" target="_blank" v-bind:href="profile.linkcv">
                                     Download Resume
                                 </a>
                             </p>
-                            <p>
-                                Hello! I&#8217;m Agus Firman.
-                                Senior Web Developer specializing in front end development. Experienced with all stages
-                                of the development
-                                cycle for dynamic web projects. Well-versed in numerous programming languages including
-                                JavaScript, SQL, and
-                                C. Stng background in project management and customer relations.
+                            <br>
+                                <span v-html="profile.qoute">
+                                    {{ profile.qoute }}
+                                </span>
                             </p>
                         </div>
                     </div>
                 </section>
+                <!-- Profile Section End -->
+
+                <!-- Skill Section -->
                 <section id="skills" class="section section-skills">
                     <div class="animate-up">
                         <h2 class="section-title">Professional Skills</h2>
                         <div class="section-box">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-md-6" v-for="(item, index) in skillItems">
                                     <div class="progress-bar">
                                         <div class="bar-data">
-                                            <span class="bar-title">WordPress</span>
-
+                                            <span class="bar-title">
+                                                {{ item.title }} 
+                                                <span class="alignright">
+                                                [ {{ item.percentase }}]</span>
+                                            </span>
                                         </div>
                                         <div class="bar-line">
-                                            <span class="bar-fill" data-width="80%"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="progress-bar">
-                                        <div class="bar-data">
-                                            <span class="bar-title">HTML &amp; CSS</span>
-
-                                        </div>
-                                        <div class="bar-line">
-                                            <span class="bar-fill" data-width="89%"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="progress-bar">
-                                        <div class="bar-data">
-                                            <span class="bar-title">JavaScript</span>
-
-                                        </div>
-                                        <div class="bar-line">
-                                            <span class="bar-fill" data-width="52%"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="progress-bar">
-                                        <div class="bar-data">
-                                            <span class="bar-title">PHP &amp; MySQL</span>
-
-                                        </div>
-                                        <div class="bar-line">
-                                            <span class="bar-fill" data-width="99%"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="progress-bar">
-                                        <div class="bar-data">
-                                            <span class="bar-title">Drupal</span>
-
-                                        </div>
-                                        <div class="bar-line">
-                                            <span class="bar-fill" data-width="61%"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="progress-bar">
-                                        <div class="bar-data">
-                                            <span class="bar-title">Photoshop</span>
-
-                                        </div>
-                                        <div class="bar-line">
-                                            <span class="bar-fill" data-width="97%"></span>
+                                            <span class="bar-fill" v-bind:data-width="item.percentase"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -304,562 +244,73 @@
                         </div>
                     </div>
                 </section>
-                <section id="portfolio" class="section section-portfolio">
+                <!-- Skill Section End -->
+
+
+                <!-- Project Section -->
+                <section id="project" class="section section-services text-left">
                     <div class="animate-up">
-                        <h2 class="section-title">Portfolio</h2>
-                        <div class="section-box-transparent">
-                            <div class="filter">
-                                <div class="filter-inner">
-                                    <div class="filter-btn-group">
-                                        <button data-filter="*">All</button>
-                                        <button data-filter=".pf-19">Photography</button>
-                                        <button data-filter=".pf-20">UX design</button>
-                                    </div>
-                                    <div class="filter-bar">
-                                        <span class="filter-bar-line"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pf-grid pf-container" data-popup="type1" data-view="grid">
-                                <div class="pf-grid-sizer"></div>
-                                <div class="pf-grid-item size22 pf-19 ">
-                                    <article class="pf-item"
-                                        style="background-image: url('assets/uploads/photo-607x576.jpg')">
-                                        <div class="pf-item-cont text-left clear-mrg">
-                                            <img class="pf-item-logo" src="assets/uploads/logo-jquery-1-2-2-1-1.png"
-                                                alt="">
-                                            <h2 class="pf-item-title">Dreams visualization</h2>
-                                            <div class="pf-item-cat">
-                                                <span>Photography </span>
-                                            </div>
-                                        </div>
-                                        <div class="pf-btn-group text-left">
-                                            <a class="pf-btn pf-btn-zoom" href="#">
-                                                <i class="rsicon rsicon-zoom_in"></i>
-                                            </a>
-                                            <a class="pf-btn pf-btn-eye" href="#"><i class="rsicon rsicon-eye"></i></a>
-                                            <a target="_blank" class="pf-btn pf-btn-link" href="#">
-                                                <i class="rsicon rsicon-link"></i></a>
-                                        </div>
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-media">
-                                                    <div class="pf-embed" data-type="image" data-width="670"
-                                                        data-height="470"
-                                                        data-url="assets/uploads/portfolio-610x452.jpg"></div>
-                                                </div>
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h2 class="pf-popup-title">Street Photography</h2>
-                                                        <h3 class="pf-popup-cat"><span>Photography </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                            <p>The methods for creating poetic rhythm vary across
-                                                                languages and between poetic traditions. Languages are
-                                                                often described as having timing set primarily by
-                                                                accents, syllables, or moras, depending on how rhythm is
-                                                                established, though a language can be influenced by
-                                                                multiple approaches.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-media">
-                                                    <div class="pf-embed" data-type="image" data-width="670"
-                                                        data-height="470"
-                                                        data-url="assets/uploads/portfolio-1-610x452.jpg"></div>
-                                                </div>
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h3 class="pf-popup-cat"><span>Photography </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                            <p>The methods for creating poetic rhythm vary across
-                                                                languages and between poetic traditions. Languages are
-                                                                often described as having timing set primarily by
-                                                                accents, syllables, or moras, depending on how rhythm is
-                                                                established, though a language can be influenced by
-                                                                multiple approaches.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h2 class="pf-popup-title">Project Title</h2>
-                                                        <h3 class="pf-popup-cat"><span>Photography </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                            <p>The methods for creating poetic rhythm vary across
-                                                                languages and between poetic traditions. Languages are
-                                                                often described as having timing set primarily by
-                                                                accents, syllables, or moras, depending on how rhythm is
-                                                                established, though a language can be influenced by
-                                                                multiple approaches.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="pf-grid-item size11 pf-19 pf-20 ">
-                                    <article class="pf-item"
-                                        style="background-image: url('assets/uploads/kaboompics-294x278.jpg')">
-                                        <div class="pf-item-cont text-left clear-mrg">
-                                            <h2 class="pf-item-title">Time is Chronos</h2>
-                                            <div class="pf-item-cat">
-                                                <span>Photography </span>
-                                                <span>UX design </span>
-                                            </div>
-                                        </div>
-                                        <div class="pf-btn-group text-left">
-                                            <a class="pf-btn pf-btn-zoom" href="#"><i
-                                                    class="rsicon rsicon-zoom_in"></i></a>
-                                            <a target="_blank" class="pf-btn pf-btn-link" href="#"><i
-                                                    class="rsicon rsicon-link"></i></a>
-                                        </div>
-
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-media">
-                                                    <div class="pf-embed" data-type="image" data-width="670"
-                                                        data-height="470"
-                                                        data-url="assets/uploads/portfolio-2-610x452.jpg"></div>
-                                                </div>
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h3 class="pf-popup-cat"><span>Photography </span><span>UX
-                                                                design </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h3 class="pf-popup-cat"><span>Photography </span><span>UX
-                                                                design </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                            <p>In the broadest sense, is the natural, physical, or
-                                                                material world or universe. &#8220;Nature&#8221; can
-                                                                refer to the phenomena of the physical world, and also
-                                                                to life in general. The study of nature is a large part
-                                                                of science. Although humans are part of nature, human
-                                                                activity is often understood as a separate category from
-                                                                other natural phenomena.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="pf-grid-item size11 pf-20 ">
-                                    <article class="pf-item"
-                                        style="background-image: url('assets/uploads/photo-294x278.jpg')">
-                                        <div class="pf-item-cont text-left clear-mrg">
-
-                                            <h2 class="pf-item-title">Office selection</h2>
-
-                                            <div class="pf-item-cat">
-                                                <span>UX design </span> </div>
-                                        </div>
-                                        <div class="pf-btn-group text-left">
-                                            <a class="pf-btn pf-btn-zoom" href="#"><i
-                                                    class="rsicon rsicon-zoom_in"></i></a>
-                                            <a target="_blank" class="pf-btn pf-btn-link" href="#"><i
-                                                    class="rsicon rsicon-link"></i></a>
-                                        </div>
-
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-media">
-                                                    <div class="pf-embed" data-type="image" data-width="670"
-                                                        data-height="470"
-                                                        data-url="assets/uploads/portfolio-3-610x452.jpg"></div>
-                                                </div>
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h3 class="pf-popup-cat"><span>UX design </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pf-popup-slide">
-                                            <div class="pf-popup-item">
-                                                <div class="pf-popup-media">
-                                                    <div class="pf-embed" data-type="iframe" data-width="670"
-                                                        data-height="470" data-url="#"></div>
-                                                </div>
-                                                <div class="pf-popup-info">
-                                                    <header class="pf-popup-head clear-mrg">
-                                                        <h2 class="pf-popup-title">Beautiful Nature</h2>
-                                                        <h3 class="pf-popup-cat"><span>UX design </span></h3>
-                                                    </header>
-
-                                                    <div class="pf-popup-cont">
-                                                        <dl class="pf-popup-def-list">
-                                                            <dt>Client</dt>
-                                                            <dd>Client name</dd>
-                                                            <dt>Project</dt>
-                                                            <dd>Project name</dd>
-                                                            <dt>Other title</dt>
-                                                            <dd>Description</dd>
-                                                        </dl>
-
-                                                        <div class="pf-popup-text clear-mrg">
-                                                            <p>Human society and forests influence each other in both
-                                                                positive and negative ways. Forests provide ecosystem
-                                                                services to humans and serve as tourist attractions.
-                                                                Forests can also impose costs, affect people&#8217;s
-                                                                health, and interfere with tourist enjoyment. Human
-                                                                activities, including harvesting forest resources, can
-                                                                negatively affect forest ecosystems.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                            </div>
-                            <div class="pf-grid-more text-center" data-cat="[19,20]" data-tax="1" data-path=""
-                                data-count="3" data-more-count="3" data-offset="3" data-popup_style="single_popup"
-                                data-display_type="grid" data-loaded-count="0">
-                                <span class="ajax-loader"></span>
-                                <button class="btn btn-border ripple"><i class="rsicon rsicon-add"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="services" class="section section-services text-left">
-                    <div class="animate-up">
-                        <h2 class="section-title">Our Services</h2>
+                        <h2 class="section-title">Our Project</h2>
                         <div class="section-box">
 
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-paint-brush"></i></div>
-                                        <h3 class="service-title">Design</h3>
-                                        <h4 class="service-sub-title">UI/UX design, Site Architecture</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>Herbs are fun and easy to grow. When harvested they make even the
-                                                simplest meal seem like a gourmet delight. By using herbs in your
-                                                cooking you can</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-desktop"></i></div>
-                                        <h3 class="service-title">Web Development</h3>
-                                        <h4 class="service-sub-title">UI and UX design</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>Vitamin B is more often referred to today as the B vitamins to better
-                                                relate that it is actually a group of 8 different vitamins, with varying
-                                                functions and sources. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-send"></i></div>
-                                        <h3 class="service-title">Marketing</h3>
-                                        <h4 class="service-sub-title">SEO</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>World over people use massage therapy to help promote healthy skin,
-                                                nourish and strengthen the body, relieve stress, </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-shopping-bag"></i></div>
-                                        <h3 class="service-title">WooCommerce</h3>
-                                        <h4 class="service-sub-title">UI/UX design, Site Architecture</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>Allergies and chemical sensitivities are a symptom of a compromised
-                                                immune system.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-wordpress"></i></div>
-                                        <h3 class="service-title">Wordpress</h3>
-                                        <h4 class="service-sub-title">UI and UX design</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>Eczema can be a burden. It is a skin condition that can range in severity
-                                                from dry, red patches on your skin to cracked, weeping sores. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-icon"><i class="rsicon rsicon-life-bouy"></i></div>
-                                        <h3 class="service-title">support</h3>
-                                        <h4 class="service-sub-title">SEO</h4>
-                                        <div class="service-cont">
-                                            <hr>
-                                            <p>Although there is no exact treatment for fibromyalgia, but some
-                                                preventive measures can be taken to get rid of it. Presently doctors are
-                                                concentrating on it.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <project
+                                v-for="item in projectItems"
+                                :name="item.name"
+                                :image="item.image"
+                                :description="item.description"
+                                :link="item.link"
+                                ></project>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- Project Section End -->
+
+                <!-- Experience Section -->
                 <section id="experience" class="section section-experience">
                     <div class="animate-up">
                         <h2 class="section-title">Work Experience</h2>
                         <div class="timeline">
                             <div class="timeline-bar"></div>
                             <div class="timeline-inner clearfix">
-                                <div class="timeline-box ">
-                                    <span class="dot"></span>
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="timeline-head">
-
-                                            <div class="date">2019 - Present</div>
-                                            <a class="img" href="#">
-                                                <img src="assets/grhakedoya.png" alt="">
-                                            </a>
-                                            <h4>Software Engineering</h4>
-                                        </div>
-                                        <p>Worked as part of a multi-disciplinary team, carrying out ad-hoc tasks as
-                                            requested by the IT Manager. Had a specific brief to ensure the websites
-                                            build for customer’s precisely matched their requirements.developers and
-                                            marketers.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-box ">
-                                    <span class="dot"></span>
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="timeline-head">
-
-                                            <div class="date">2015 - 2018</div>
-                                            <a class="img" href="#">
-                                                <img src="assets/grandfamily.png" alt="">
-                                            </a>
-                                            <h4>HEAD IT & Software Engineering</h4>
-                                        </div>
-                                        <p>I was responsible for working on a range of projects, designing appealing
-                                            websites and interacting on a daily basis with graphic designers, back-end
-                                            developers and marketers.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-box ">
-                                    <span class="dot"></span>
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="timeline-head">
-
-                                            <div class="date">2014 - 2015</div>
-                                            <a class="img" href="#">
-                                                <img src="assets/insanaqilah.png" alt="">
-                                            </a>
-                                            <h4>Teacher of Web Design</h4>
-                                        </div>
-                                        <p>Rebuilt and enhanced existing ASP B2C site with ASP.NET 2.0 Framework and
-                                            tools. Technology consists of ASP.NET 2.0 (C#), IIS, Microsoft SQL Server
-                                            2005, Stored Procedures &amp; PayPal Instant Payment Notification.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-box ">
-                                    <span class="dot"></span>
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="timeline-head">
-
-                                            <div class="date">2013 - 2014</div>
-                                            <a class="img" href="#">
-                                                <img src="assets/kingsun.png" alt="">
-                                            </a>
-                                            <h4>Drafter Engineering</h4>
-                                        </div>
-                                        <p>Developed, managed, operated and promoted an Internet business.Handled
-                                            customer support issues.Planned and managed business finances.</p>
-                                    </div>
-                                </div>
+                                <work-experience 
+                                v-for="exItem in experienceItems"
+                                v-bind:company="exItem.company"
+                                v-bind:title="exItem.title"
+                                v-bind:description="exItem.description"
+                                v-bind:start="exItem.start"
+                                v-bind:end="exItem.end"
+                                v-bind:logo="exItem.logo"
+                                >
+                                </work-experience>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- Experience Section End -->
+
+
+                <!-- Education Section -->
                 <section id="education" class="section section-education">
                     <div class="animate-up">
                         <h2 class="section-title">Education</h2>
                         <div class="timeline">
                             <div class="timeline-bar"></div>
                             <div class="timeline-inner clearfix">
-                                <div class="timeline-box timeline-box-compact ">
-                                    <span class="dot"></span>
-
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="date">2010 - 2015</div>
-                                        <h3>Banchelor of Information Technology</h3>
-                                        <img class="img" src="" alt="">
-                                        <h4>
-                                            <a href="http://www.unbaja.ac.id " target="_blank">
-                                                Banten Jaya University </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="timeline-box timeline-box-compact ">
-                                    <span class="dot"></span>
-
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="date">2015 - 2012</div>
-                                        <h3>Network Programming</h3>
-                                        <img class="img" src="localhost/assets/idn.png" alt="">
-                                        <h4>
-                                            <a href="https://idn.id">
-                                                IDN Network </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="timeline-box timeline-box-compact ">
-                                    <span class="dot"></span>
-
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="date">2007 - 2008</div>
-                                        <h3>Certificate for courses of Computer Science</h3>
-                                        <img class="img" src="" alt="">
-                                        <h4>
-                                            <a href="#">
-                                                Stanfoorb Universitey </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="timeline-box timeline-box-compact ">
-                                    <span class="dot"></span>
-
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="date">2007 - 2008</div>
-                                        <h3>1 week Courses of Information Systems</h3>
-                                        <img class="img" src="" alt="">
-                                        <h4>
-                                            <a href="#">
-                                                Oxforz Universitey </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="timeline-box timeline-box-compact ">
-                                    <span class="dot"></span>
-
-                                    <div class="timeline-box-inner ">
-                                        <span class="arrow"></span>
-                                        <div class="date">2006 - 2007</div>
-                                        <h3>Software Engineering</h3>
-                                        <img class="img" src="" alt="">
-                                        <h4>
-                                            <a href="#">
-                                                Sordonne University </a>
-                                        </h4>
-                                    </div>
-                                </div>
+                                <education 
+                                v-for="item in educactionItems"
+                                :institute="item.institute"
+                                :subject="item.subject"
+                                :start-end="item.startEnd"
+                                ></education>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- Education Section End -->
+
+                <!-- Contact Section -->
                 <section id="contact" class="section section-contact">
                     <div class="animate-up">
                         <h2 class="section-title">Contact Us</h2>
@@ -919,21 +370,24 @@
                                         </li>
                                         <li class="clearfix">
                                             <strong>Address</strong>
-                                            <span>Jl. Ciruas - Walantaka Pipitan KM.3<br />Serang - Banten 42183</span>
+                                            <span>Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat Daerah Khusus Ibukota Jakarta 11630</span>
                                         </li>
                                     </ul>
                                     
-                                    <div class="mb-2">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4365774891307!2d106.75532621390632!3d-6.206000862518089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f73b1c513161%3A0x15d4dfd5bdd04d89!2sAgus%20Firman%2C%20Jl.%20H.%20Simun%20RT.1%20RW.5%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sid!2sid!4v1605349663743!5m2!1sid!2sid" width="500" height="250" frameborder="0" style="border:0;" allowfullscreen="false" aria-hidden="true" tabindex="0"></iframe>
+                                    <div class="embed mb-2">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4365774891307!2d106.75532621390632!3d-6.206000862518089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f73b1c513161%3A0x15d4dfd5bdd04d89!2sAgus%20Firman%2C%20Jl.%20H.%20Simun%20RT.1%20RW.5%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sid!2sid!4v1605349663743!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="false" aria-hidden="true" tabindex="0"></iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- Contact Section End -->
+
             </div>
         </div>
 
+        <!-- Footer Section -->
         <footer class="footer">
             <div class="footer-social">
                 <ul class="social">
@@ -952,12 +406,15 @@
                 </ul>
             </div>
         </footer>
+        <!-- Footer Section End -->
 
     </div>
 
     <a href="#" class="btn-scroll-top">
         <i class="rsicon rsicon-arrow-up"></i>
     </a>
+
+
     <div id="overlay"></div>
     <div id="preloader">
         <div class="preload-icon"><span></span><span></span></div>
@@ -965,6 +422,7 @@
     </div>
 
 
+    <script src="/assets/js/vue.js"></script>
     <script type='text/javascript' src='assets/js/jquery.mCustomScrollbar.concat.min.js'></script>
     <script type='text/javascript' src='assets/js/contact-form.js'></script>
     <script type='text/javascript' src='assets/js/js.cookie.min.js'></script>
@@ -980,8 +438,207 @@
     <script type='text/javascript' src='assets/js/owl.carousel.js'></script>
     <script type='text/javascript' src='assets/js/slick.min.js'></script>
     <script type='text/javascript' src='assets/js/awwwards.js'></script>
-    <!-- <script src="angular.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+    <script>
+        Vue.component('button-counter', {
+            data: function () {
+                return {
+                count: 0
+                }
+            },
+            template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+        })
+
+        Vue.component('work-experience', {
+            props:['company', 'description','logo', 'title', 'start', 'end'],
+            template: ` <div class="timeline-box ">
+                            <span class="dot"></span>
+                            <div class="timeline-box-inner ">
+                                <span class="arrow"></span>
+                                <div class="timeline-head">
+                                    <h3>{{ company }} </h3>
+                                    <div class="date">{{ start }} - {{ end }}</div>
+                                    <a class="img" href="#">
+                                        <img v-bind:src="logo" alt="logo">
+                                        
+                                    </a>
+                                    <h4>{{ title }}</h4>
+                                    
+                                </div>
+                                <p>
+                                    {{ description }}
+                                </p>
+                            </div>
+                        </div>`
+        })
+
+        Vue.component('education', {
+            props:['institute', 'startEnd','subject'],
+            template: `<div class="timeline-box timeline-box-compact ">
+                            <span class="dot"></span>
+                            <div class="timeline-box-inner ">
+                                <span class="arrow"></span>
+                                <div class="date">{{ startEnd }}</div>
+                                <h3>{{ subject }}</h3>
+                                <img class="img" src="" alt="">
+                                <h4>
+                                    <a href="#">{{ institute }}</a>
+                                </h4>
+                            </div>
+                        </div>`
+        })
+
+        Vue.component('project', {
+            props:['name', 'image','description','link'],
+            template: `<div class="col-md-6">
+                        <div class="service">
+                            <div class="service-icon"><i class="rsicon rsicon-paint-brush"></i></div>
+                            <h3 class="service-title">{{ name }}</h3>
+                            <img :src="image" alt="Image">
+                            <div class="service-cont">
+                                <hr>
+                                <p>
+                                {{ description }}
+                                </p>
+                            </div>
+                            <a :href="link" target="_blank" >Link Application</a>
+                        </div>
+                    </div>`
+        })
+
+
+       var app = new Vue({
+            el: '#app',
+            data:{
+                profile:{
+                    name:"Agus Firman",
+                    birthdate:"19910603",
+                    position:"Fullstack Web Developer",
+                    address:" Jl. H. Simun RT.1 RW.5, Srengseng Kec. Kembangan Kota Jakarta Barat Daerah Khusus Ibukota Jakarta 11630",
+                    phone:"0859-450-71263",
+                    email:"firmanagus59@gmail.com",
+                    facebook:"",
+                    instagram:"",
+                    dribble:"",
+                    twitter:"",
+                    linkedin:"",
+                    linkcv:"https://www.linknya.com",
+                    qoute:"Assalamu'alaikum, Saya Agus Firman. Selaku pegiat atau pekerja di bidang teknologi khususnya perancangan WEB aplikasi.</br>Saya selalu berpikir terbuka, luas dan maju  dengan  setiap kemajuan teknologi yang begitu amat cepat dan pesat saat ini, dengan itu saya selalu mengembangkan kemampuan diri akan hal- hal baru."
+                },
+                skillItems:[
+                        {title:"WordPress",percentase:"80%"},
+                        {title:"HTML & CSS",percentase:"80%"},
+                        {title:"PHP",percentase:"90%"},
+                        {title:"Framework Laravel",percentase:"80%"},
+                        {title:"Framework Codeigniter",percentase:"70%"},
+                    ],  
+                experienceItems:[
+                        {
+                            company:"Brawijaya Healthcare",
+                            title:"Fullstack WEB Developer",
+                            description:"Merancang atau membuat aplikasi berbasis WEB mulai dari design database sampai dengan deployment application, terlepas itu saya juga mengerjakan untuk sisi Front-end dan Back-end nya",
+                            logo:"./assets/brawijaya.png",
+                            start:"Desember 2019",
+                            end:"Present"
+                        },
+                        {
+                            company:"RS Grha Kedoya",
+                            title:"WEB Developer & System Analys",
+                            description:"Merancang atau membuat aplikasi berbasis WEB dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor",
+                            logo:"./assets/grhakedoya.png",
+                            start:"November 2018",
+                            end:"Desember 2019"
+                        },
+                        {
+                            company:"RSIA Grand Family",
+                            title:"WEB Developer & Head IT",
+                            description:"Merancang atau membuat aplikasi kebutuhan internal dan melakukan analisa dan perbaikan setiap permasalahan- permasalahan yang terjadi terkait aplikasi opersional rumah sakit dan meneruskanya ke vendor serta koordinasi dengan divisi terkait ",
+                            logo:"./assets/grandfamily.png",
+                            start:"Oktober 2015",
+                            end:"November 2018"
+                        },
+                        {
+                            company:"SMK Insan Aqilah (Serang)",
+                            title:"Teacher of WEB Design",
+                            description:"Memberikan dan merancang KBM siswa untuk mata pelajaran yang berhubungan dengan pemrograman dan networking",
+                            logo:"./assets/insanaqilah.png",
+                            start:"Oktober 2015",
+                            end:"November 2018"
+                        },
+                    ], 
+                educactionItems:[
+                    {
+                        institute:"Indonesia Networker",
+                        startEnd:"September 2017-Oktober 2017",
+                        subject:"Networking Programming"
+                    },
+                    {
+                        institute:"BANTEN JAYA UNIVERSITY",
+                        startEnd:"Mei 2010-Mei2015",
+                        subject:"Banchelor of Information Technology"
+                    },
+                    {
+                        institute:"Teknoss",
+                        startEnd:"Januari 2010-Maret 2010",
+                        subject:"MS. Office"
+                    }
+                ],
+                projectItems:[
+                    {
+                        name:"WEB Portal with Attendance",
+                        image:"./assets/images/mockups/portal-web.png",
+                        link:"https://portal.brawijayainvestama.com",
+                        description:"WEB portal aplikasi yang digunakan untuk karyawan internal mulai dari Head Office sampai dengan unit untuk melakukan absensi secara online dengan fitur current geolocation dari Google Maps dan manfaat Whatsapp Blast untuk notifikasinya "
+                    },
+                    {
+                        name:"Hospital Acquisition Stock",
+                        image:"./assets/images/mockups/hospital-acquisitions.jpg",
+                        link:"http://139.255.96.149:5011/",
+                        description:"WEB aplikasi yang digunakan untuk melakukan transaksi serah terima stock (Stock Opname) terakhir yang dimana aplikasi ini sudah support untuk multi company dan dengan fitur stock freeze (stock tidak akan terecord ketika ada pergerakan"
+                    },
+                    {
+                        name:"Helpdesk Ticketing IT",
+                        image:"./assets/images/mockups/helpdesk.jpg",
+                        link:"http://portal.brawijayainvestama.com",
+                        description:"WEB aplikasi yang digunakan untuk melakukan request perbaikan dari user kepada tim support IT, user bisa melakukan monitorin progress case yang sudah di terima oleh tim IT. Applikasi ini juga sudah support multi company yang dimana ketika proses request ticket bisa langsung mengarahkan ke unit company terkait"
+                    },
+                    {
+                        name:"HR Contract Monitoring",
+                        image:"./assets/images/mockups/Internal-Brawijaya.png",
+                        link:"http://139.255.96.149:5002/InternalBrawijaya",
+                        description:"WEB aplikasi yang digunakan khusus untuk divisi HR terkait kontrak karyawan yang dimana aplikasi ini juga sudah mendukung multi company dan sudah ada reminder kontrak H-30, H-10 menjelang habis kontrak"
+                    },
+                    {
+                        name:"E-Form Legal",
+                        image:"./assets/images/mockups/legal.jpg",
+                        link:"http://portal.brawijayainvestama.com",
+                        description:"WEB aplikasi yang digunakan khusus untuk divisi Legal terkait proses legalitas perusahaan yang dimana dalam aplikasi ini dibagi beberapa type legalitasnya mulai dari dokter, prusahaan , dan opini user"
+                    },
+                ] 
+            },
+            created() {
+                console.log(this.profile);
+                this.getAge();
+            },
+            filters:{
+                getAge(dob){                    
+                    var year = Number(dob.substr(0, 4));
+                    var month = Number(dob.substr(4, 2)) - 1;
+                    var day = Number(dob.substr(6, 2));
+                    var today = new Date();
+                    var age = today.getFullYear() - year;
+                    if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
+                    age--;
+                    }
+                    return age+"th";
+                }
+            },
+            methods: {
+            },
+        })
+
+        
+    </script>
 </body>
 
 </html>
