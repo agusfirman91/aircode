@@ -18,6 +18,9 @@
     <link rel='stylesheet' href='assets/css/css.css' type=' text/css' media='all' />
     <link rel='stylesheet' href='assets/css/theme-color.css' type='text/css' media='all' />
 
+    <script type='text/javascript' src='assets/js/jquery.js'></script>
+    <script type='text/javascript' src='assets/js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='assets/js/site.js'></script>
     <script type='text/javascript' src='assets/js/modernizr.js'></script>
 
 </head>
@@ -407,19 +410,14 @@
         <div class="preload-text"></div>
     </div>
 
-
-<!--     <script src="/assets/js/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type='text/javascript' src='assets/js/jquery.mCustomScrollbar.concat.min.js'></script>
-    <script type='text/javascript' src='assets/js/contact-form.js'></script>
-    <script type='text/javascript' src='assets/js/js.cookie.min.js'></script>
-    <script type='text/javascript' src='assets/js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='assets/js/imagesloaded.min.js'></script>
     <script type='text/javascript' src='assets/js/isotope.pkgd.min.js'></script>
     <script type='text/javascript' src='assets/js/jquery.appear.js'></script>
-    <script type='text/javascript' src='assets/js/slick.min.js'></script>
-    <script type='text/javascript' src='assets/js/owl.carousel.js'></script>
     <script type='text/javascript' src='assets/js/jquery.onepagenav.min.js'></script>
-    <script type='text/javascript' src='assets/js/imagesloaded.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.bxslider.min.js'></script>
+    <script type='text/javascript' src='assets/js/slick.min.js'></script>
 
     <script>
         Vue.component('button-counter', {
@@ -662,17 +660,7 @@
                             this.errors.push('Please checkeed for to policy  accept.');
                         }
                     }
-
-                    if (!$form.name) {
-                        this.errorName = true;
-                    }
-
-                    if (!$form.subject) {
-                        this.errorSubject = true;
-                    }
-                    if (!$form.message) {
-                        this.errorMessage = true;
-                    }
+                    
                 }
             },
         })
